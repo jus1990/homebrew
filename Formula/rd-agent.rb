@@ -11,7 +11,7 @@ class RdAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.0/rd-agent_0.1.0_darwin_amd64.tar.gz"
-      sha256 "61ae2e0d461231dbb81ecf02dcd3ba8facfbdb66e6d1e983820ce276d0c83756"
+      sha256 "87ced7fcf2d847569145aa80924581bd754bf40863d4fc7333303f18abb8c4b9"
 
       define_method(:install) do
         bin.install "rd-agent"
@@ -19,7 +19,7 @@ class RdAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.0/rd-agent_0.1.0_darwin_arm64.tar.gz"
-      sha256 "5f1f0f892b21994d8fccb5a8f51248428def3d2d2d9a25197e8114d3e14aad58"
+      sha256 "4b47539230ec7fcf016d1f8bf8a3641e6839c8b1d7535099b9053e55308e0e12"
 
       define_method(:install) do
         bin.install "rd-agent"
@@ -30,14 +30,14 @@ class RdAgent < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.0/rd-agent_0.1.0_linux_amd64.tar.gz"
-      sha256 "0a13c1924faa7b3dc256ecb8ca3faa9bbd7c306732c5cea6edb415f841b5d2e5"
+      sha256 "e35927ae9740269390bb52a41f7def1c3404cc1317a2f63d36e9172ad97e754e"
       define_method(:install) do
         bin.install "rd-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.0/rd-agent_0.1.0_linux_arm64.tar.gz"
-      sha256 "3007ae16ea2ae08ee541dbe5732ef31d5385631d44c947fdc4a00c3bf0b66d21"
+      sha256 "08f7049999673b2e73346f7dd9eb221edb0973fa4d52ac8fa3262a4059b1e5ee"
       define_method(:install) do
         bin.install "rd-agent"
       end
