@@ -5,21 +5,21 @@
 class RdAgent < Formula
   desc "RD Agent - lightweight file sync client"
   homepage "https://github.com/jus1990/rd-agent"
-  version "0.1.4"
+  version "0.1.5"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.4/rd-agent_0.1.4_darwin_amd64.tar.gz"
-      sha256 "6c3ba60de03e4f65a342c1e3bb3f720dd1ee66429c8190278bb33b6736593cfd"
+      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.5/rd-agent_0.1.5_darwin_amd64.tar.gz"
+      sha256 "e39bee03056646a10ba55873dd9cb4d2a58eeeae267b1b0c4dc2f8ba634297ce"
 
       define_method(:install) do
         bin.install "rd-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.4/rd-agent_0.1.4_darwin_arm64.tar.gz"
-      sha256 "c4144045355c40d96bdf0349415903f3feed0232dd02d7dafdd7198088c560f3"
+      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.5/rd-agent_0.1.5_darwin_arm64.tar.gz"
+      sha256 "3a0bf79e4aec2389e0cb3a9760fc34da56c87630a391f46aed2854136c936d48"
 
       define_method(:install) do
         bin.install "rd-agent"
@@ -29,15 +29,15 @@ class RdAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.4/rd-agent_0.1.4_linux_amd64.tar.gz"
-      sha256 "f626de70d4e7edcda50ced76a5aee96b200c8d93761fd51d9905ea9f7e182b78"
+      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.5/rd-agent_0.1.5_linux_amd64.tar.gz"
+      sha256 "2b9c0bf930467f2e95b46c1527070f426f948260a07b864d043184e892ed15e6"
       define_method(:install) do
         bin.install "rd-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.4/rd-agent_0.1.4_linux_arm64.tar.gz"
-      sha256 "124c1385c90e47336c4ee3e4a3b4086863934922e4ef6788f2bf6e0937e391e5"
+      url "https://rd-brew.s3.ap-northeast-1.amazonaws.com/rd-agent/0.1.5/rd-agent_0.1.5_linux_arm64.tar.gz"
+      sha256 "39199dfa2f36554ed74f45b62f46c731240e6eee334af0efa233b71017f85ccf"
       define_method(:install) do
         bin.install "rd-agent"
       end
